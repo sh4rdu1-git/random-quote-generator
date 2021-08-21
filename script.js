@@ -1,7 +1,9 @@
+// Display a random quote when page loads for first time
 window.onload = function () {
   generateQuote();
 };
 
+// random categories of quotes required for API call
 const randomizeCategory = () => {
   const categories = [
     "inspire",
@@ -17,22 +19,24 @@ const randomizeCategory = () => {
   return categories[random_index];
 };
 
+// generate a quote from a random category
 const generateQuote = async () => {
-  //   console.log("generating quote...");
   let quote = "";
   let author = "";
   const category = randomizeCategory();
   const URL = `https://quotes.rest/qod.json?language=en&category=${category}`;
-  //   wait till API fetch is completed
+
+  // fetch a quote using the fetch API GET request
+  // wait till API fetch is completed
   await fetch(URL)
-    .then((res) => res.json())
+    .then((res) => res.json()) // promise received
     .then((data) => {
       quote = data.contents.quotes[0].quote;
       author = data.contents.quotes[0].author;
     })
     .catch((err) => console.error(err));
-  console.log(quote);
 
+  // modify HTML elements with new data
   document.getElementById("quote").innerHTML = quote;
   document.getElementById("author").innerHTML = author;
 };
