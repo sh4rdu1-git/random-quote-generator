@@ -1,3 +1,7 @@
+window.onload = function () {
+  generateQuote();
+};
+
 const randomizeCategory = () => {
   const categories = [
     "inspire",
