@@ -16,29 +16,29 @@ body {
 .container {
   width: 95%;
   height: 100vh;
-  margin: auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .quote-container {
-  max-width: 900px;
-  min-height: 400px;
+  max-width: 90vw;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: hsl(76, 100%, 91%);
   border: 10px inset hsl(32, 90%, 72%);
   text-align: center;
 }
 
 .quote-container blockquote {
+  padding-bottom: 1rem;
   font-family: "Caveat", cursive;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: hsl(0, 0%, 25%);
 }
 
@@ -52,6 +52,7 @@ body {
 button {
   width: 15rem;
   height: 3rem;
+  margin: 1rem;
   border: none;
   border-radius: 1.5rem;
   color: hsl(0, 0%, 100%);
@@ -67,4 +68,19 @@ button:hover {
   border: 2px solid hsl(224, 67%, 45%);
   color: hsl(224, 67%, 45%);
   background-color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 480px) {
+  .quote-container blockquote {
+    font-size: 2rem;
+  }
+
+  .quote-container h2 {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 10rem;
+    font-size: .75rem;
+  }
 }
