@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@300;400&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(202, 100%, 75%);
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.quote-container {
+  max-width: 900px;
+  min-height: 400px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(76, 100%, 91%);
+  border: 10px inset hsl(32, 90%, 72%);
+  text-align: center;
+}
+
+.quote-container blockquote {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  color: hsl(0, 0%, 25%);
+}
+
+.quote-container h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 25%);
+}
+
+button {
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 67%, 45%);
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid hsl(224, 67%, 45%);
+  color: hsl(224, 67%, 45%);
+  background-color: hsl(0, 0%, 100%);
+}
